@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InovaPay</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./css/inicio.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="./img/LOGO.png" alt="InovaPay Logo">
+            </div>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-item">
+                <a href="./index.html">
+                    <i class="bi bi-house-door"></i> Home
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="./inicio.html">
+                    <span class="material-icons-outlined">inventory_2</span> Despesas
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="./duvidas.html">
+                    <span class="material-icons-outlined">category</span> Educação
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="./simulador.html">
+                    <span class="material-icons-outlined">poll</span> Simulador
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="area">
+        <div class="context">
+            <h1>Bem vindo ao Inova Pay!</h1>
+            <p>Sua futuro financeiro começa aqui!</p>
+            <button class="small-button" onclick="window.location.href='./inicio.html'">Gerencie suas finanças</button>
+        </div>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="conceitos-basicos">
+            <h2>Conceitos Básicos de Educação Financeira</h2>
+            <p>Educação financeira é o processo de adquirir conhecimento sobre como administrar seu dinheiro de forma eficaz.</p>
+            <button onclick="toggleInfo('info-conceitos')">Saiba Mais</button>
+            <div id="info-conceitos" class="hidden">
+                <ul>
+                    <li><strong>Orçamento:</strong> Criação de um plano financeiro para controlar receitas e despesas.</li>
+                    <li><strong>Poupança:</strong> Reservar uma parte da renda para emergências ou objetivos de longo prazo.</li>
+                    <li><strong>Investimentos:</strong> Aplicar dinheiro em ativos que podem gerar retorno no futuro.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas de Economia</h2>
+            <p>Pequenas mudanças de hábitos podem ter um grande impacto na sua vida financeira.</p>
+            <ul>
+                <li>Evite compras por impulso.</li>
+                <li>Tenha um fundo de emergência.</li>
+                <li>Faça uma lista de compras antes de ir ao mercado.</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>

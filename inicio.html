@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <script src="./javascript/prototype.js"></script>
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/load.js" defer></script>
+  </head>
+  <body>
+    <aside id="sidebar">
+      <div class="sidebar-header">
+          <div class="sidebar-brand">
+            <img src="./img/LOGO.png" alt="InovaPay Logo">
+          </div>
+      </div>
+      <ul class="sidebar-list">
+          <li class="sidebar-item">
+              <a href="./index.html">
+                  <i class="bi bi-house-door"></i> Home
+              </a>
+          </li>
+          <li class="sidebar-item">
+              <a href="./inicio.html">
+                  <span class="material-icons-outlined">inventory_2</span> Despesas
+              </a>
+          </li>
+          <li class="sidebar-item">
+              <a href="./duvidas.html">
+                  <span class="material-icons-outlined">category</span> Educação
+              </a>
+          </li>
+          <li class="sidebar-item">
+              <a href="./simulador.html">
+                  <span class="material-icons-outlined">poll</span> Simulador
+              </a>
+          </li>
+      </ul>
+  </aside>
+      <main class="main-container">
+        <div class="main-title">
+          <h2>DESPESAS</h2>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>ENTRADAS</h3>
+              <span class="material-icons-outlined"><i class="bi bi-arrow-up-circle"></i></span>
+            </div>
+            <h1 id="bankInputsValueDisplay"></h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>SAÍDAS</h3>
+              <span class="material-icons-outlined"><i class="bi bi-arrow-down-circle"></i></span>
+            </div>
+            <h1 id="bankOutputsValueDisplay"></h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>TOTAL</h3>
+              <span class="material-icons-outlined"><i class="bi bi-currency-dollar"></i></span>
+            </div>
+            <h1 id="bankTotalValueDisplay"></h1>
+          </div>
+
+        </div>
+        <div>
+          <h2>INSERIR TRANSAÇÃO</h2>
+          <form action="#" id="form-entradaTransacoes">
+            <div>
+              <label for="input-name">Nome</label>
+              <input type="text" name="name" id="input-name" required>
+            </div>
+            <div>
+              <label for="input-value">Valor</label>
+              <input type="text" name="value" id="input-value" required>
+            </div>
+            <div>
+              <label for="input-date">Data</label>
+              <input type="datetime-local" name="date" id="input-date" required>
+            </div>
+            <div class="inputs-radiolabel">
+              <input type="radio" name="direction" id="input-direction-in" value="in" checked required><label for="input-direction-in">Entrada</label>
+              <input type="radio" name="direction" id="input-direction-out" value="out" required><label for="input-direction-out">Saída</label>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <div>
+          <h2>TRANSAÇÕES</h2>
+          <ul id="bankTransactionsDisplay"></ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
