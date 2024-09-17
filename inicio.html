@@ -10,8 +10,12 @@
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/tema.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./javascript/prototype.js"></script>
     <script src="./javascript/main.js"></script>
+    <script src="./javascript/config.js"></script>
+    <script src="./javascript/inicio.js" defer></script>
     <script src="./javascript/load.js" defer></script>
   </head>
   <body>
@@ -79,28 +83,43 @@
         <div>
           <h2>INSERIR TRANSAÇÃO</h2>
           <form action="#" id="form-entradaTransacoes">
-            <div>
-              <label for="input-name">Nome</label>
-              <input type="text" name="name" id="input-name" required>
+            <div id="form-textInputs">
+              <div>
+                <label for="input-name">Nome</label>
+                <input type="text" name="name" id="input-name" required>
+              </div>
+              <div>
+                <label for="input-value">Valor</label>
+                <input type="text" name="value" id="input-value" required>
+              </div>
             </div>
             <div>
-              <label for="input-value">Valor</label>
-              <input type="text" name="value" id="input-value" required>
+              <div>
+                <label for="input-date">Data</label>
+                <input type="datetime-local" name="date" id="input-date" required>
+              </div>
+              <div id="form-radioNSubmit">
+                <div class="inputs-radiolabel">
+                  <input type="radio" name="direction" id="input-direction-in" style="filter: hue-rotate(280deg)" value="in" checked required><label for="input-direction-in">Entrada</label>
+                  <input type="radio" name="direction" id="input-direction-out" style="filter: hue-rotate(120deg)" value="out" required><label for="input-direction-out">Saída</label>
+                </div>
+                <button type="submit">Enviar</button>
+              </div>
             </div>
-            <div>
-              <label for="input-date">Data</label>
-              <input type="datetime-local" name="date" id="input-date" required>
-            </div>
-            <div class="inputs-radiolabel">
-              <input type="radio" name="direction" id="input-direction-in" value="in" checked required><label for="input-direction-in">Entrada</label>
-              <input type="radio" name="direction" id="input-direction-out" value="out" required><label for="input-direction-out">Saída</label>
-            </div>
-            <button type="submit">Enviar</button>
           </form>
         </div>
         <div>
           <h2>TRANSAÇÕES</h2>
-          <ul id="bankTransactionsDisplay"></ul>
+          <div id="bankTransactionsDisplay-container">
+            <p>
+              <span>Nome</span>
+              <span>Valor</span>
+              <span>Direção</span>
+              <span>Data</span>
+              <span></span>
+            </p>
+            <ul id="bankTransactionsDisplay"></ul>
+          </div>
         </div>
       </main>
     </div>

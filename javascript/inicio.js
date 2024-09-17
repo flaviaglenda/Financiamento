@@ -4,6 +4,12 @@ bank.config({
     automaticDate: true,
     removeButton: {
         type: "img",
-        content: "./img/cancelButton.svg"
+        content: "./img/cancelButton.svg",
+        clickEvent: sweetAlertRemoveButton
+    },
+    editButton: {
+        type: 'img',
+        content: './img/editButton.svg',
+        clickEvent: sweetAlertEditButton
     }
-  })
+})

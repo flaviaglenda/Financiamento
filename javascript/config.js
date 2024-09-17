@@ -52,6 +52,10 @@ let sweetAlertEditButton = (transaction) => {
                 display: block;
                 width: 100%;
             }
+            #sweetalert-transasctionEditForm input, #sweetalert-transasctionEditForm button {
+                border-radius: 0.5em;
+                border: 0;
+            }
             #sweetalert-transasctionEditForm label {
                 display: inline-block;
                 width: 30%;
@@ -145,18 +149,16 @@ let sweetAlertEditButton = (transaction) => {
                 </div>
                 <div id="sweetalert-transasctionEditForm-radios">
                     <div class="sweetalertForm-customRadio">
-                        <input type="radio" name="direction" id="sweetalert-transasctionEditForm-inInput" value="in"/>
-                        <div class="sweetalertForm-customRadio-display green"></div>
+                        <input type="radio" name="direction" style="filter: hue-rotate(280deg)" id="sweetalert-transasctionEditForm-inInput" value="in"/>
                     </div>
-                    <label for="">Entrada</label>
+                    <label for="sweetalert-transasctionEditForm-inInput">Entrada</label>
                     <div class="sweetalertForm-customRadio">
-                        <input type="radio" name="direction" id="sweetalert-transasctionEditForm-outInput" value="out"/>
-                        <div class="sweetalertForm-customRadio-display red"></div>
+                        <input type="radio" name="direction" style="filter: hue-rotate(120deg)" id="sweetalert-transasctionEditForm-outInput" value="out"/>
                     </div>
-                    <label for="">Saída</label>
+                    <label for="sweetalert-transasctionEditForm-outInput">Saída</label>
                 </div>
             </div>
-            <button type="submit">Enviar</button>
+            <button type="submit" style="color: white;">Enviar</button>
         </form>`,
         confirmButtonText: "Editar",
         didOpen: () => {

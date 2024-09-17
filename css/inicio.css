@@ -134,15 +134,15 @@ body {
   }
   
   .card:first-child {
-    background-color: #4FC9D0;
+    background-color: var(--spring);
   }
   
   .card:nth-child(2) {
-    background-color: #4FC9D0;
+    background-color: var(--red);
   }
   
   .card:nth-child(3) {
-    background-color: #18cf49;
+    background-color: var(--blue);
   }
   
   .card-inner h3 {
@@ -172,7 +172,7 @@ body {
     margin: 10px 0;
     display: grid;
     grid-template-columns: 1fr 10fr;
-    margin-left: 4em;
+    margin-left: 2.5em;
     width: 5em;
   }
   
@@ -185,22 +185,35 @@ body {
   }
   
   form button[type=submit] {
-    margin: 0 8em;
+    margin: 0 3em;
     padding: 0.3em 0.5em;
   }
-  
+  .transactionButton {
+    aspect-ratio: 1/1 ;
+    height: 1em;
+    margin: 0 0.6em;
+    padding: 0;
+  }
   .transactionButton img {
     width: 1em;
-    height: 1em;
     aspect-ratio: 1/1 ;
+    background-color: var(--greyFilter2);
+    padding: 0.4em;
+    border-radius: 0.3em;
   }
   
   #bankTransactionsDisplay li {
     display: grid;
-    grid-template-columns: 6fr 4fr 3fr 3fr 1fr;
+    grid-template-columns: 6fr 4fr 3fr 3fr 0.5fr 0.5fr;
     padding: 0.5em;
-    border-radius: 0.2em;
+    border-radius: 0.8em;
     margin-bottom: 0.2em;
+    height: 1.4em;
+  }
+
+  #bankTransactionsDisplay li span {
+    height: fit-content;
+    margin-top: auto;
   }
   
   #bankTransactionsDisplay button {
@@ -211,13 +224,82 @@ body {
   }
   
   .inputTransaction {
-    background-color: green;
+    background-color: var(--green);
   }
   
   .outputTransaction {
-    background-color: red;
+    background-color: var(--red);
   }
   
+  #form-entradaTransacoes {
+    display: flex;
+  }
+
+  #form-entradaTransacoes > div {
+    width: 50%;
+  }
+
+  #form-entradaTransacoes > div:first-of-type > div {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  #form-radioNSubmit {
+    display: flex;
+    align-items: center;
+  }
+
+  #form-textInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #form-entradaTransacoes input:not([type=radio]) {
+    border-radius: 0.4em;
+    border: 0;
+    outline: 2px var(--blue) solid;
+    background-color: transparent;
+    color: white;
+  }
+
+  #form-entradaTransacoes input[type=datetime-local]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+  }
+
+  #form-entradaTransacoes input:-webkit-autofill, #form-entradaTransacoes input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+    background-color: transparent !important;
+    box-shadow: none;
+  }
+
+  #form-entradaTransacoes button {
+    border-radius: 0.4em;
+    padding: 0.5em 0.8em;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    outline: 2px var(--blue) solid;
+  }
+
+  #bankTransactionsDisplay-container {
+    background-color: var(--blueFilter2);
+    width: 80%;
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+  }
+  #bankTransactionsDisplay-container p {
+    display: grid;
+    grid-template-columns: 6fr 4fr 3fr 3fr 0.5fr 0.5fr;
+  }
+  #bankTransactionsDisplay:empty::after {
+    content: "Nenhuma transação...";
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  #bankTransactionsDisplay {
+    padding: 0;
+  }
 
   .charts {
     display: grid;
