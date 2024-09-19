@@ -19,6 +19,7 @@
 
 body{
   min-height: 100vh;
+  background-color: #1a1e28;
 }
 
 .sidebar{
@@ -306,20 +307,20 @@ body{
 }
 
 #audioIcon {
-    display: none; /* Esconder o ícone de áudio inicialmente */
+    display: none; /* Esconder ícone */
   }
   
   .sidebar.open #audioIcon {
-    display: block; /* Exibir o ícone de áudio quando o menu estiver aberto */
+    display: block; 
   }
 
   .sidebar i {
-    font-size: 30px; /* Aumenta o tamanho dos ícones */
+    font-size: 30px; 
   }
   
 
 .sidebar.open .logo_details .logo_name {
-    font-size: 18px; /* Aumenta o tamanho do texto no menu */
+    font-size: 18px; 
   }
 
 
@@ -343,7 +344,7 @@ main #titulo {
 }
 
 main {
-    margin-left: 78px; /* Ajuste para compensar a largura do sidebar */
+    margin-left: 78px; /*largura do sidebar */
     padding: 20px;
 }
 
@@ -386,6 +387,13 @@ form button:hover {
   gap: 12em;
 }
 
+@media (min-width: 800px) and (max-width: 1200px) {
+  #simuladordiv {
+    margin: 0 4em;
+    gap: 5em;
+  }
+}
+
 #simuladordiv section {
   width: 40%;
   max-width: 35em;
@@ -393,6 +401,7 @@ form button:hover {
 
 #financeForm > div {
   padding-top: 1em;
+  
 }
 
 #financeForm > div:last-of-type {
@@ -424,3 +433,4 @@ input:-webkit-autofill, input:-webkit-autofill:focus {
   background-color: transparent !important;
   box-shadow: none;
 }
+

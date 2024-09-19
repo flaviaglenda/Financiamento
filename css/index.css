@@ -343,7 +343,7 @@ body {
     height: 100vh;
     position: relative;
     top: 0;
-    left: 200px;
+    left: 72px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -469,7 +469,7 @@ button.small-button:hover {
 
 main {
     background-color: #1a1e28;
-    margin-left: 200px;
+    margin-left: 72px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -524,7 +524,7 @@ button:hover {
 
 .pensador {
     position: relative;
-    width: 100%;
+    width: 90%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
