@@ -338,14 +338,19 @@ header {
     text-align: center;
 }
 
+main #titulo {
+  height: auto !important;
+}
 
 main {
-    margin-left: 220px; /* Ajuste para compensar a largura do sidebar */
+    margin-left: 78px; /* Ajuste para compensar a largura do sidebar */
     padding: 20px;
 }
 
 form {
     margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: #25324b;
 }
 
 form div {
@@ -373,4 +378,49 @@ form button {
 
 form button:hover {
     background-color: #333;
+}
+
+#simuladordiv {
+  justify-content: center;
+  margin: 0 12em;
+  gap: 12em;
+}
+
+#simuladordiv section {
+  width: 40%;
+  max-width: 35em;
+}
+
+#financeForm > div {
+  padding-top: 1em;
+}
+
+#financeForm > div:last-of-type {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+#financeForm > div > div {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 2em;
+  gap: 1em;
+  vertical-align: middle;
+}
+
+#simuladordiv input {
+  margin-top: 0;
+}
+
+#financeForm button {
+  margin: 0;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+  background-color: transparent !important;
+  box-shadow: none;
 }

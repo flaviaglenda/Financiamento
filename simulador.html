@@ -18,7 +18,7 @@
         <script src="./javascript/main.js"></script>
         <script src="./javascript/config.js"></script>
         <script src="./javascript/load.js"></script>
-        <script src="./javascript/simulador.js"></script>
+        <script src="./javascript/simulador.js" defer></script>
     </head>
     <body>
       
@@ -73,25 +73,32 @@
             <h2 id="titulo">Simulador de finanças</h2>
             <div id="simuladordiv">
 
+              <section>
+
                 <form action="#" id="financeForm">
                     <div>
+                      <div>
                         <label for="financeForm-capital">Capital: </label>
                         <input class="caixainfo" type="text" name="capital" id="financeForm-capital">
-                        
-            
+                      </div>
+                      <div>
                         <label for="financeForm-initial">Entrada: </label>
                         <input class="caixainfo" type="text" name="initial" id="financeForm-initial">
-                        
-                        
+                      </div>
+                      <div>
                         <label for="financeForm-rate">Taxa: </label>
                         <input class="caixainfo" type="text" name="rate" id="financeForm-rate">
-                        
-                        
+                      </div>
+                      <div>
                         <label for="financeForm-time">Tempo: </label>
-                    <input class="caixainfo" type="text" name="time" id="financeForm-time">
+                        <input class="caixainfo" type="text" name="time" id="financeForm-time">
+                      </div>
                 </div>
-                <button id="emviar" type="submit">Simular</button>
-            </form>
+                <div>
+                  <button id="emviar" type="submit">Simular</button>
+                </div>
+              </form>
+              </section>
             <section id="financeOutput">
                 <div>
                     <p>Capital: <span id="financeOutput-capital"></span></p>
