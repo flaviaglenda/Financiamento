@@ -4,167 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/duvidas.css">
-    <title>Document</title>
-    <script src="./javascript/main.js"></script>
-</head>
-<body>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>InovaPay</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./javascript/index.js"></script>
-    <script src="./javascript/duvidas.js"></script>
+    <script src="./javascript/index.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-            </div>
-          </header>
-
-          <aside id="sidebar">
-            <div class="sidebar-header">
-                <div class="sidebar-brand">
-                    <img src="./img/LOGO.png" alt="InovaPay Logo">
-                </div>
-            </div>
-            <ul class="sidebar-list">
-                <li class="sidebar-item">
-                    <a href="./index.html">
-                        <i class="bi bi-house-door"></i> Home
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="./inicio.html">
-                        <span class="material-icons-outlined">inventory_2</span> Despesas
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="./duvidas.html">
-                        <span class="material-icons-outlined">category</span> Educação
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="./simulador.html">
-                        <span class="material-icons-outlined">poll</span> Simulador
-                    </a>
-                </li>
-            </ul>
-        </aside>
- <div class="title-cards">
-    <h2>Entenda suas Dívidas e os Juros</h2>
-</div>
-
-<!-- cards com efeito -->
-<div class="container">
-    <div class="content">
-      <div class="accordion_item" style="background-color: #53e6c1;">
-        <div class="accordion_header">
-          <span>
-            Tipos de Juros
-          </span> 
-          <div class="icon">
-            +
-          </div>
+ 
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_details">
+            <i class="bi bi-cash-coin" id="audioIcon"></i>
+          <div class="logo_name">Inova Pay</div>
+          <i class="bi bi-list" id="btn"></i>
         </div>
+        <ul class="nav-list">
+         
+          <li>
+            <a href="#">
+                <a href="./index.html">
+                    <i class="bi bi-house-door"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li>
+            <a href="#">
+                <a href="./inicio.html">
+                <i class="bi bi-archive"></i>
+              <span class="link_name">Despesas</span>
+            </a>
+            <span class="tooltip">Despesas</span>
+          </li>
+          <li>
+            <a href="#">
+                <a href="./duvidas.html">
+                <i class="bi bi-book"></i>
+              <span class="link_name">Educação</span>
+            </a>
+            <span class="tooltip">Educação</span>
+          </li>
 
-        <div class="accordion_content">
-          <p>
-            Os tipos de juros são simples e compostos. Juros simples são calculados apenas sobre o valor inicial, enquanto os compostos são calculados sobre o valor inicial e os juros acumulados, resultando em crescimento mais acelerado.
-          </p>
-        </div>
+          <li>
+            <a href="#">
+                <a href="./simulador.html">
+                <i class="bi bi-bar-chart"></i>
+              <span class="link_name">Simulador</span>
+            </a>
+            <span class="tooltip">Simulador</span>
+          </li>
+         
+         
+        </ul>
       </div>
-      <div class="accordion_item" style="background-color: #1f9fb6;">
-        <div class="accordion_header">
-          <span>
-            Como os Juros Compõem
-          </span> 
-          <div class="icon">
-            +
-          </div>
-        </div>
-
-        <div class="accordion_content">
-          <p>
-            Os juros compostos se acumulam sobre o valor principal e os juros já gerados em períodos anteriores. Cada período de capitalização calcula juros sobre o montante total (principal + juros acumulados), resultando em um crescimento exponencial do valor investido ou emprestado.
-        </div>
-      </div>
-      <div class="accordion_item" style="background-color: #15705f;">
-        <div class="accordion_header">
-          <span>
-            Estratégias para Reduzir Dívidas
-          </span> 
-          <div class="icon">
-            +
-          </div>
-        </div>
-
-        <div class="accordion_content">
-          <p>
-            Para reduzir dívidas, crie um orçamento, priorize dívidas com juros altos, considere a consolidação, negocie com credores, aumente sua renda e evite contrair novas dívidas.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- final do card -->
-
-<div class="container-card">
-
-<div class="card">
-<figure>
-    <img src="./img/img 1.jpeg">
-</figure>
-<div class="contenido-card">
-    <h3>Juros Simples</h3>
-    <p>Juros simples é quando os juros são calculados somente sobre o valor inicial (capital), sem acumular ao longo do tempo.
-        <span class="more-text" style="display:none;"> <br>A fórmula é: <br>J = C × i × t</span>
-    </p>
-    <a href="#" class="leer-mas">Ler Mais</a>
-</div>
-</div>
-
-<div class="card">
-<figure>
-    <img src="img/img 2.jpeg">
-</figure>
-<div class="contenido-card">
-    <h3>Juros Compostos</h3>
-    <p>Juros compostos são calculados sobre o valor inicial (capital) e também sobre os juros acumulados em cada período.
-        <span class="more-text" style="display:none;"><br>A fórmula é: <br>M = C × (1 + i)ⁿ</span>
-    </p>
-    <a href="#" class="leer-mas">Ler Mais</a>
-</div>
-</div>
-</div>
-<div class="video-gallery">
+     
     
-    <div class="videos-container">
-        <div class="video-card">
-            <video src="img/video1.mp4" controls></video>
-            <p class="video-caption">Aprenda Juros Simples</p>
+      <div class="title-cards">
+        <h2>Entenda suas Dívidas e os Juros</h2>
+    </div>
+    
+    <!-- cards com efeito -->
+    <div class="container">
+        <div class="content">
+          <div class="accordion_item" style="background-color: #d3cbcbc9;">
+            <div class="accordion_header">
+              <span>
+                Tipos de Juros
+              </span> 
+              <div class="icon">
+                +
+              </div>
+            </div>
+    
+            <div class="accordion_content">
+              <p>
+                Os tipos de juros são simples e compostos. Juros simples são calculados apenas sobre o valor inicial, enquanto os compostos são calculados sobre o valor inicial e os juros acumulados, resultando em crescimento mais acelerado.
+              </p>
+            </div>
+          </div>
+          <div class="accordion_item" style="background-color: #d3cbcbc9;">
+            <div class="accordion_header">
+              <span>
+                Como os Juros Compõem
+              </span> 
+              <div class="icon">
+                +
+              </div>
+            </div>
+    
+            <div class="accordion_content">
+              <p>
+                Os juros compostos se acumulam sobre o valor principal e os juros já gerados em períodos anteriores. Cada período de capitalização calcula juros sobre o montante total (principal + juros acumulados), resultando em um crescimento exponencial do valor investido ou emprestado.
+            </div>
+          </div>
+          <div class="accordion_item" style="background-color: #d3cbcbc9;">
+            <div class="accordion_header">
+              <span>
+                Estratégias para Reduzir Dívidas
+              </span> 
+              <div class="icon">
+                +
+              </div>
+            </div>
+    
+            <div class="accordion_content">
+              <p>
+                Para reduzir dívidas, crie um orçamento, priorize dívidas com juros altos, considere a consolidação, negocie com credores, aumente sua renda e evite contrair novas dívidas.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="video-card">
-            <video src="img/video 2.mp4" controls></video>
-            <p class="video-caption">Matemática Financeira</p>
-        </div>
-        <div class="video-card">
-            <video src="img/VIDEO 3.mp4" controls></video>
-            <p class="video-caption">Exercícios - Juros Simples</p>
-        </div>
-        <div class="video-card">
-            <video src="img/JUROS COMPOSTOS_ como calcular e exemplos _ Resumo de Matemática para o Enem _ Lucas Borguezan.mp4" controls></video>
-            <p class="video-caption">Juros Compostos</p>
-        </div>
-        <div class="video-card">
-            <video src="img/COMO CALCULAR JUROS COMPOSTOS _.mp4" controls></video>
-            <p class="video-caption">Passo a passo</p>
-        </div>
-        <div class="video-card">
-            <video src="img/Juros compostos - Cálculo do montante, dos juros, da taxa de juros, do principal e do prazo.mp4" controls></video>
-            <p class="video-caption">Calculando Juros Compostos</p>
+      </div>
+    
+        
+    <!-- final do card -->
+    
+    <div class="container-card">
+    
+    <div class="card">
+    <figure>
+        <img src="img/js.jpeg">
+    </figure>
+    <div class="contenido-card">
+        <h3>Juros Simples</h3>
+        <p>Juros simples é quando os juros são calculados somente sobre o valor inicial (capital), sem acumular ao longo do tempo.
+            <span class="more-text" style="display:none;"> <br>A fórmula é: <br>J = C × i × t</span>
+        </p>
+        <a href="#" class="leer-mas">Ler Mais</a>
+    </div>
+    </div>
+    
+    <div class="card">
+    <figure>
+        <img src="img/jc.jpeg">
+    </figure>
+    <div class="contenido-card">
+        <h3>Juros Compostos</h3>
+        <p>Juros compostos são calculados sobre o valor inicial (capital) e também sobre os juros acumulados em cada período.
+            <span class="more-text" style="display:none;"><br>A fórmula é: <br>M = C × (1 + i)ⁿ</span>
+        </p>
+        <a href="#" class="leer-mas">Ler Mais</a>
+    </div>
+    </div>
+    
+    
+    <div class="card">
+      <figure>
+        
+      </figure>
+      <div class="contenido-card">
+          <h3>Juros Compostos</h3>
+          <p>Juros compostos são calculados sobre o valor inicial (capital) e também sobre os juros acumulados em cada período.
+              <span class="more-text" style="display:none;"><br>A fórmula é: <br>M = C × (1 + i)ⁿ</span>
+          </p>
+          
+      </div>
+      </div>
+    </div>
+    <!-- VIDEO -->
+    <div class="video-gallery">
+        
+        <div class="videos-container">
+            <div class="video-card">
+                <video src="img/video1.mp4" controls></video>
+                <p class="video-caption">Aprenda Juros Simples</p>
+            </div>
+            <div class="video-card">
+                <video src="img/video 2.mp4" controls></video>
+                <p class="video-caption">Matemática Financeira</p>
+            </div>
+            <div class="video-card">
+                <video src="img/VIDEO 3.mp4" controls></video>
+                <p class="video-caption">Exercícios - Juros Simples</p>
+            </div>
+            <div class="video-card">
+                <video src="img/JUROS COMPOSTOS_ como calcular e exemplos _ Resumo de Matemática para o Enem _ Lucas Borguezan.mp4" controls></video>
+                <p class="video-caption">Juros Compostos</p>
+            </div>
+            <div class="video-card">
+                <video src="img/COMO CALCULAR JUROS COMPOSTOS _.mp4" controls></video>
+                <p class="video-caption">Passo a passo</p>
+            </div>
+            <div class="video-card">
+                <video src="img/Juros compostos - Cálculo do montante, dos juros, da taxa de juros, do principal e do prazo.mp4" controls></video>
+                <p class="video-caption">Calculando Juros Compostos</p>
+            </div>
+            <!-- Continue para os outros vídeos -->
         </div>
     </div>
-</div>
-</body>
-</html>
+    <script>
+    document.querySelectorAll('.leer-mas').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita que o link recarregue a página
+            
+            const moreText = this.previousElementSibling.querySelector('.more-text');
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                this.textContent = "Ler Menos";
+            } else {
+                moreText.style.display = "none";
+                this.textContent = "Ler Mais";
+            }
+        });
+    });
+    
+    // accordian
+    const accordion_item = document.querySelectorAll(".accordion_item");
+    
+    accordion_item.forEach((item) => {
+      const accordion_header_item = item.querySelector(".accordion_header");
+    
+      accordion_header_item.addEventListener("click", () => {
+        const accordion_content_item = item.querySelector(".accordion_content");
+    
+        const item_actived = document.querySelector(".active");
+    
+        VerifyActive(item, accordion_content_item, item_actived);
+      });
+    });
+    
+    function VerifyActive(item, content, content_actived) {
+      const icon_item = item.querySelector(".icon");
+      const icon_item_active = document.querySelectorAll(".icon");
+    
+      icon_item_active.forEach((item) => (item.innerHTML = "+"));
+    
+      if (content_actived) {
+        content_actived.style.height = 0;
+        content_actived.classList.remove("active");
+      }
+    
+      if (content !== content_actived) {
+        icon_item.innerHTML = "-";
+        content.classList.add("active");
+        content.style.height = content.scrollHeight + 10 + "px";
+      }
+    }
+    
+    window.onload = function(){
+        const sidebar = document.querySelector(".sidebar");
+        const closeBtn = document.querySelector("#btn");
+        const searchBtn = document.querySelector(".bx-search")
+    
+        closeBtn.addEventListener("click",function(){
+            sidebar.classList.toggle("open")
+            menuBtnChange()
+        })
+    
+        searchBtn.addEventListener("click",function(){
+            sidebar.classList.toggle("open")
+            menuBtnChange()
+        })
+    
+        function menuBtnChange(){
+            if(sidebar.classList.contains("open")){
+                closeBtn.classList.replace("bx-menu","bx-menu-alt-right")
+            }else{
+                closeBtn.classList.replace("bx-menu-alt-right","bx-menu")
+            }
+        }
+    }
+    </script>
+    
+    
+    </body>
+    </html>

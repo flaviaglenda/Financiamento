@@ -1,4 +1,4 @@
-
+/* estilos.css */
 header {
     color: white;
     padding: 10px 0;
@@ -9,16 +9,16 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px; 
+    width: 200px;
     height: 100%;
-    background-color: #1a1e28; 
+    background-color: #1a1e28;
     padding-top: 20px;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 .sidebar-brand img {
     margin-left: 20px;
-    width: 110px; 
+    width: 110px;
     height: auto;
 }
 
@@ -43,7 +43,7 @@ header {
 .sidebar-list li a i,
 .sidebar-list li a span {
     margin-right: 10px;
-    font-size: 35px; 
+    font-size: 35px;
 }
 
 .sidebar-list li a:hover {
@@ -51,12 +51,39 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
-  
-.sidebar-responsive {
-    display: inline !important;
-    position: absolute;
-  }
 
-  label{
-    text-align: start;
-  }
+main {
+    margin-left: 220px; /* Ajuste para compensar a largura do sidebar */
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #1a1e28;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #333;
+}
