@@ -15,35 +15,52 @@
 
 <body>
 
-    <aside id="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-brand">
-                <img src="./img/LOGO.png" alt="InovaPay Logo">
-            </div>
+    <div class="sidebar">
+        <div class="logo_details">
+            <i class="bi bi-cash-coin" id="audioIcon"></i>
+          <div class="logo_name">Inova Pay</div>
+          <i class="bi bi-list" id="btn"></i>
         </div>
-        <ul class="sidebar-list">
-            <li class="sidebar-item">
+        <ul class="nav-list">
+         
+          <li>
+            <a href="#">
                 <a href="./index.html">
-                    <i class="bi bi-house-door"></i> Home
-                </a>
-            </li>
-            <li class="sidebar-item">
+                    <i class="bi bi-house-door"></i>
+              <span class="link_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+          <li>
+            <a href="#">
                 <a href="./inicio.html">
-                    <span class="material-icons-outlined">inventory_2</span> Despesas
-                </a>
-            </li>
-            <li class="sidebar-item">
+                <i class="bi bi-archive"></i>
+              <span class="link_name">Despesas</span>
+            </a>
+            <span class="tooltip">Despesas</span>
+          </li>
+          <li>
+            <a href="#">
                 <a href="./duvidas.html">
-                    <span class="material-icons-outlined">category</span> Educação
-                </a>
-            </li>
-            <li class="sidebar-item">
+                <i class="bi bi-book"></i>
+              <span class="link_name">Educação</span>
+            </a>
+            <span class="tooltip">Educação</span>
+          </li>
+
+          <li>
+            <a href="#">
                 <a href="./simulador.html">
-                    <span class="material-icons-outlined">poll</span> Simulador
-                </a>
-            </li>
+                <i class="bi bi-bar-chart"></i>
+              <span class="link_name">Simulador</span>
+            </a>
+            <span class="tooltip">Simulador</span>
+          </li>
+         
+         
         </ul>
-    </aside>
+      </div>
+     
 
     <div class="area">
         <div class="context">
@@ -115,7 +132,31 @@
             </section>
         </div>
     </main>
-    
+    <script>
+        window.onload = function(){
+    const sidebar = document.querySelector(".sidebar");
+    const closeBtn = document.querySelector("#btn");
+    const searchBtn = document.querySelector(".bx-search")
+
+    closeBtn.addEventListener("click",function(){
+        sidebar.classList.toggle("open")
+        menuBtnChange()
+    })
+
+    searchBtn.addEventListener("click",function(){
+        sidebar.classList.toggle("open")
+        menuBtnChange()
+    })
+
+    function menuBtnChange(){
+        if(sidebar.classList.contains("open")){
+            closeBtn.classList.replace("bx-menu","bx-menu-alt-right")
+        }else{
+            closeBtn.classList.replace("bx-menu-alt-right","bx-menu")
+        }
+    }
+}
+    </script>
     
 </body>
 
