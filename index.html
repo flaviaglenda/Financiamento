@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="./css/inicio.css">
 </head>
+
 <body>
 
     <aside id="sidebar">
@@ -47,7 +48,7 @@
     <div class="area">
         <div class="context">
             <h1>Bem vindo ao Inova Pay!</h1>
-            <p>Sua futuro financeiro começa aqui!</p>
+            <p>Seu futuro financeiro começa aqui!</p>
             <button class="small-button" onclick="window.location.href='./inicio.html'">Gerencie suas finanças</button>
         </div>
         <ul class="circles">
@@ -63,31 +64,59 @@
             <li></li>
         </ul>
     </div>
-
     <main>
-        <section id="conceitos-basicos">
-            <h2>Conceitos Básicos de Educação Financeira</h2>
-            <p>Educação financeira é o processo de adquirir conhecimento sobre como administrar seu dinheiro de forma eficaz.</p>
-            <button onclick="toggleInfo('info-conceitos')">Saiba Mais</button>
-            <div id="info-conceitos" class="hidden">
+        <div class="row">
+            <section id="conceitos-basicos" class="concept">
+                <h2>Conceitos Básicos de Educação Financeira</h2>
+                <p>Educação financeira é o processo de adquirir conhecimento sobre como administrar seu dinheiro de forma eficaz.</p>
+                <div id="info-conceitos" class="hidden">
+                    <ul>
+                        <li><strong>Orçamento:</strong> Criação de um plano financeiro para controlar receitas e despesas.</li>
+                        <li><strong>Poupança:</strong> Reservar uma parte da renda para emergências ou objetivos de longo prazo.</li>
+                        <li><strong>Investimentos:</strong> Aplicar dinheiro em ativos que podem gerar retorno no futuro.</li>
+                    </ul>
+                </div>
+                <button id="toggle-conceitos" onclick="toggleInfo('info-conceitos', 'conceitos-basicos')">Saiba Mais</button>
+            </section>
+    
+            <section id="dicas">
+                <h2>Dicas de Economia</h2>
+                <p>Pequenas mudanças de hábitos podem ter um grande impacto na sua vida financeira.</p>
                 <ul>
-                    <li><strong>Orçamento:</strong> Criação de um plano financeiro para controlar receitas e despesas.</li>
-                    <li><strong>Poupança:</strong> Reservar uma parte da renda para emergências ou objetivos de longo prazo.</li>
-                    <li><strong>Investimentos:</strong> Aplicar dinheiro em ativos que podem gerar retorno no futuro.</li>
+                    <li>Evite compras por impulso.</li>
+                    <li>Tenha um fundo de emergência.</li>
+                    <li>Faça uma lista de compras antes de ir ao mercado.</li>
                 </ul>
-            </div>
-        </section>
-
-        <section id="dicas">
-            <h2>Dicas de Economia</h2>
-            <p>Pequenas mudanças de hábitos podem ter um grande impacto na sua vida financeira.</p>
-            <ul>
-                <li>Evite compras por impulso.</li>
-                <li>Tenha um fundo de emergência.</li>
-                <li>Faça uma lista de compras antes de ir ao mercado.</li>
-            </ul>
-        </section>
+            </section>
+        </div>
+    
+        <div class="row">
+            <section class="pensador">
+                <div id="pensador-carousel" class="carousel">
+                    <div class="carousel-slide">
+                        <img src="./img/obama.webp" alt="Barack Obama" class="carousel-image">
+                        <p><em>"O dinheiro não é a única resposta, mas faz diferença."</em> - Barack Obama</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/John-Maynard-Keynes-009.webp" alt="John Maynard Keynes" class="carousel-image">
+                        <p><em>"O capitalismo é a crença mais extraordinária já adotada por pessoas inteligentes."</em> - John Maynard Keynes</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/original.avif" alt="Milton Friedman" class="carousel-image">
+                        <p><em>"A inflação é sempre e em toda parte um fenômeno monetário."</em> - Milton Friedman</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/ADAM.jpg" alt="Adam Smith" class="carousel-image">
+                        <p><em>"A riqueza das nações depende do trabalho produtivo."</em> - Adam Smith</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+            </section>
+        </div>
     </main>
-
+    
+    
 </body>
+
 </html>

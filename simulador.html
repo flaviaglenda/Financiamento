@@ -50,24 +50,27 @@
             </ul>
         </aside>
         <main>
-            <form action="#" id="financeForm">
-                <div>
-                    <label for="financeForm-capital">Capital: </label>
-                    <input type="text" name="capital" id="financeForm-capital">
+            <h2 id="titulo">Simulador de finanças</h2>
+            <div id="simuladordiv">
+
+                <form action="#" id="financeForm">
+                    <div>
+                        <label for="financeForm-capital">Capital: </label>
+                        <input class="caixainfo" type="text" name="capital" id="financeForm-capital">
+                        
+            
+                        <label for="financeForm-initial">Entrada: </label>
+                        <input class="caixainfo" type="text" name="initial" id="financeForm-initial">
+                        
+                        
+                        <label for="financeForm-rate">Taxa: </label>
+                        <input class="caixainfo" type="text" name="rate" id="financeForm-rate">
+                        
+                        
+                        <label for="financeForm-time">Tempo: </label>
+                    <input class="caixainfo" type="text" name="time" id="financeForm-time">
                 </div>
-                <div>
-                    <label for="financeForm-initial">Entrada: </label>
-                    <input type="text" name="initial" id="financeForm-initial">
-                </div>
-                <div>
-                    <label for="financeForm-rate">Taxa: </label>
-                    <input type="text" name="rate" id="financeForm-rate">
-                </div>
-                <div>
-                    <label for="financeForm-time">Tempo: </label>
-                    <input type="text" name="time" id="financeForm-time">
-                </div>
-                <button type="submit">Simular</button>
+                <button id="emviar" type="submit">Simular</button>
             </form>
             <section id="financeOutput">
                 <div>
@@ -83,6 +86,15 @@
                     <p>Valor da Parcela: <span id="financeOutput-portion"></span></p>
                 </div>
             </section>
-        </main>
+        </div>
+
+        
+    </main>
+    <h2>Interest Over Time</h2>
+    <canvas id="interestChart" width="400" height="200"></canvas>
+
+    <script src="interest-chart.js"></script>
+
+
     </body>
 </html>

@@ -18,3 +18,4 @@ bank.finance.config({
     resetTypenUnit: true,
     ignoreTimeZero: false
 })
+
