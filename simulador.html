@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/simulador.css">
         <title>InovaPay</title>
         <link rel="stylesheet" href="./css/style.css">
         <script src="./javascript/index.js" defer></script>
@@ -19,56 +18,38 @@
         <script src="./javascript/config.js"></script>
         <script src="./javascript/load.js"></script>
         <script src="./javascript/simulador.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
     </head>
     <body>
-      
-    <div class="sidebar">
-        <div class="logo_details">
-            <i class="bi bi-cash-coin" id="audioIcon"></i>
-          <div class="logo_name">Inova Pay</div>
-          <i class="bi bi-list" id="btn"></i>
-        </div>
-        <ul class="nav-list">
-         
-          <li>
-            <a href="#">
-                <a href="./index.html">
-                    <i class="bi bi-house-door"></i>
-              <span class="link_name">Home</span>
-            </a>
-            <span class="tooltip">Home</span>
-          </li>
-          <li>
-            <a href="#">
-                <a href="./inicio.html">
-                <i class="bi bi-archive"></i>
-              <span class="link_name">Despesas</span>
-            </a>
-            <span class="tooltip">Despesas</span>
-          </li>
-          <li>
-            <a href="#">
-                <a href="./duvidas.html">
-                <i class="bi bi-book"></i>
-              <span class="link_name">Educação</span>
-            </a>
-            <span class="tooltip">Educação</span>
-          </li>
-
-          <li>
-            <a href="#">
-                <a href="./simulador.html">
-                <i class="bi bi-bar-chart"></i>
-              <span class="link_name">Simulador</span>
-            </a>
-            <span class="tooltip">Simulador</span>
-          </li>
-         
-         
-        </ul>
-      </div>
-     
-
+        <aside id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <img src="./img/LOGO.png" alt="InovaPay Logo">
+                </div>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-item">
+                    <a href="./index.html">
+                        <i class="bi bi-house-door"></i> Home
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./inicio.html">
+                        <span class="material-icons-outlined">inventory_2</span> Despesas
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./duvidas.html">
+                        <span class="material-icons-outlined">category</span> Educação
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./simulador.html">
+                        <span class="material-icons-outlined">poll</span> Simulador
+                    </a>
+                </li>
+            </ul>
+        </aside>
         <main>
             <h2 id="titulo">Simulador de finanças</h2>
             <div id="simuladordiv">
@@ -110,35 +91,36 @@
 
         
     </main>
-    <h2>Interest Over Time</h2>
-    <canvas id="interestChart" width="400" height="200"></canvas>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+            datasets: [{
+              label: 'juros',
+              data: [5, 10, 15, 20, 25, 30],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+       
 
-    <script src="interest-chart.js"></script>
 
-    <script>
-        window.onload = function(){
-    const sidebar = document.querySelector(".sidebar");
-    const closeBtn = document.querySelector("#btn");
-    const searchBtn = document.querySelector(".bx-search")
-
-    closeBtn.addEventListener("click",function(){
-        sidebar.classList.toggle("open")
-        menuBtnChange()
-    })
-
-    searchBtn.addEventListener("click",function(){
-        sidebar.classList.toggle("open")
-        menuBtnChange()
-    })
-
-    function menuBtnChange(){
-        if(sidebar.classList.contains("open")){
-            closeBtn.classList.replace("bx-menu","bx-menu-alt-right")
-        }else{
-            closeBtn.classList.replace("bx-menu-alt-right","bx-menu")
-        }
-    }
-}
-    </script>
     </body>
 </html>

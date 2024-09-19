@@ -476,6 +476,12 @@ body {
     width: 5em;
     text-align: end;
   }
+
+  canvas{
+    margin-left: 300px;
+    justify-content: center;
+    width: 500px;
+  }
   
   .inputs-radiolabel {
     margin: 10px 0;
