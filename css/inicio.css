@@ -254,13 +254,60 @@ body {
     flex-direction: column;
     justify-content: space-around;
   }
+  form{
+    margin-top: 5%;
+  }
 
-  #form-entradaTransacoes input:not([type=radio]) {
+  input:not([type=radio]) {
     border-radius: 0.4em;
     border: 0;
     outline: 2px var(--blue) solid;
     background-color: transparent;
     color: white;
+  }
+  #financeForm{
+    margin-top: 7%;
+    width: 35%;
+    padding-right: 5% ;
+    border-radius: 20px;
+    background-color: #25324b;
+    margin-right: 5%;
+    height: 60%;
+  }
+  .caixainfo{
+    border-radius: 0.4em !important;
+    border: 0 ;
+    outline: 2px var(--blue) solid;
+    background-color: transparent;
+    color: white;
+    margin-top: 10%;
+    width: 60%;
+
+  }
+  #emviar{
+    border-radius: 0.4em;
+    padding: 0.5em 0.8em;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    outline: 2px var(--blue) solid;
+    margin-top: 7%;
+    margin-left: 47%;
+    margin-bottom: 5%;
+
+  }
+
+
+  #emviar:hover{
+    background-color: #2C73D2;
+    border: 0;
+  }
+
+  #titulo{
+    height: 0px !important;
+  }
+  #simuladordiv{
+    display: flex;
   }
 
   #form-entradaTransacoes input[type=datetime-local]::-webkit-calendar-picker-indicator {
@@ -280,6 +327,10 @@ body {
     color: white;
     border: 0;
     outline: 2px var(--blue) solid;
+  }
+  #form-entradaTransacoes button:hover{
+    background-color: #2C73D2;
+    border: 0;
   }
 
   #bankTransactionsDisplay-container {
